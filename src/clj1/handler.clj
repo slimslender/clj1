@@ -7,7 +7,7 @@
   {:name s/Str
    (s/optional-key :description) s/Str
    :size (s/enum :L :M :S)
-   :origin {:country (s/enum :FI :PO)
+      :origin {:country (s/enum :FI :PO)
             :city s/Str}})
 
 (defn get-pizza []
