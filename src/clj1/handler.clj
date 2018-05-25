@@ -14,7 +14,7 @@
   {:pizza :pie
    :with :mushrooms})
 
-(def fn1 "aaaaaa")
+(def fn1 "aaaaaaa")
 
 (def app
   (api
