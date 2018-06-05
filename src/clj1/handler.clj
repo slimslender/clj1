@@ -12,8 +12,7 @@
 
 (defn get-pizza []
   {:pizza :pie
-   :with :mushrooms
-   :as :crap})
+   :with :mushrooms})
 
 (def app
   (api
