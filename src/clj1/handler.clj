@@ -3,7 +3,6 @@
             [ring.util.http-response :refer :all]
             [schema.core :as s]))
 
-
 (s/defschema Pizza
   {:name s/Str
    (s/optional-key :description) s/Str
