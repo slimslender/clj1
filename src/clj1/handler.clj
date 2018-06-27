@@ -14,13 +14,14 @@
   {:pizza :pie
    :with :mushrooms})
 
-(def app
+(def     app
   (api
    {:swagger
+
     {:ui "/"
      :spec "/swagger.json"
      :data {:info {:title "Clj1"
-                   :description "Compojure Api example"}
+                      :description "Compojure Api example"}
             :tags [{:name "api", :description "some apis"}]}}}
 
    (context "/api" []
