@@ -12,11 +12,12 @@
 
 (defn get-pizza []
   {:pizza :pie
-   :with :mushrooms}) 
+   :with :mushrooms})
 
 (def app
   (api
    {:swagger
+
     {:ui "/"
      :spec "/swagger.json"
      :data {:info {:title "Clj1"
