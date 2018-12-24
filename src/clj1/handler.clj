@@ -14,6 +14,16 @@
   {:pizza :pie
    :with :mushrooms})
 
+(defn bad-pochta [f]
+  (->> (read-string (slurp f))
+       second
+       (filter #(= (:name %) "@atomist/atomist-sdm"))
+       (map (juxt :queue_url :name :version))
+       (map #(conj % f))))
+
+(defn get-something [] (->> []
+                            (map #(println %))))
+
 (def app
   (api
    {:swagger
