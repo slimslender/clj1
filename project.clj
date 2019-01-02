@@ -1,7 +1,8 @@
  (defproject clj1 "0.1.0-SNAPSHOT"
    :description "IXME: write description"
    :dependencies [[org.clojure/clojure "1.9.11"]
-                  [metosin/compojure-api "1.1.11"]]
+                  [metosin/compojure-api "1.1.11"]
+                  [clj-time "0.14.3"]]
    :ring {:handler clj1.handler/app}
    :jar-name "server.jar"
    :target-path "target/%s/"
