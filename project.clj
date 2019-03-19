@@ -18,6 +18,11 @@
    :dynamodb-local {:port 6798
                     :in-memory? true
                     :shared-db? true}
+   :plugins [[com.livingsocial/lein-dependency-check "1.1.2"]]
+
+   :dependency-check {:properties-file "dependency-check.properties"
+                     :suppression-file "suppressions.xml"}
+
    :profiles {:dev {:dependencies [[javax.servlet/javax.servlet-api "3.1.0"]]
                     :plugins [[lein-ring "0.12.0"]
                               [lein-metajar "0.1.1"]
