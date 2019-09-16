@@ -1,3 +1,3 @@
 (ns clj1.a.crap)
 
-(defn ^:fingerprint cheezits [] 8)
+(defn ^:fingerprint cheezits [] 7)
