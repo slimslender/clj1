@@ -1,3 +1,3 @@
-(ns thing)
+(ns clj1.thing)
 
-(defn thing1 [] 1)
+(defn ^:fingerprint thing1 [] 7)
