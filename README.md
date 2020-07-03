@@ -22,4 +22,3 @@ java -jar target/server.jar
 ## License
 
 Copyright ©  FIXME
-
