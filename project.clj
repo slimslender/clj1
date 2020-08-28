@@ -1,4 +1,4 @@
- (defproject clj1 "0.1.0-SNAPSHOT"
+ (defproject clj1 "0.1.2-SNAPSHOT"
    :description "IXME: write description"
    :dependencies [[org.clojure/clojure "1.10.0"]
                   [metosin/compojure-api "1.1.13" :exclusions [commons-codec com.fasterxml.jackson.core/jackson-core]]
