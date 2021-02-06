@@ -1,4 +1,18 @@
-FROM sforzando-dockerv2-local.jfrog.io/java-atomist:0.9.0-20171216032235
+FROM clojure:lein AS builder
+
+ARG MVN_ARTIFACTORYMAVENREPOSITORY_USER
+ARG MVN_ARTIFACTORYMAVENREPOSITORY_PWD
+
+RUN mkdir /build
+
+WORKDIR /build
+
+COPY project.clj /build
+COPY src /build/src
+
+RUN lein metajar
+
+FROM clojure:openjdk-11-lein
 
 MAINTAINER Jim Clark <jim@atomist.com>
 
@@ -8,9 +22,8 @@ RUN mkdir -p /usr/src/app \
 
 WORKDIR /usr/src/app
 
-COPY target/lib /usr/src/app/lib
-
-COPY target/metajar/server.jar /usr/src/app/
+COPY --from=builder /build/target/lib /usr/src/app/lib
+COPY --from=builder /build/target/metajar/server.jar /usr/src/app/
 
 CMD ["-Djava.net.preferIPv4Stack=true", "-Xmx2048m", "-jar", "/usr/src/app/server.jar", "-Dclojure.core.async.pool-size=20", "-Datomist.kafka-client.pool-size=20"]
 
