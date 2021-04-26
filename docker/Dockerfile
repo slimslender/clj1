@@ -14,7 +14,7 @@ RUN lein metajar
 
 FROM clojure:openjdk-11-lein@sha256:2050775923b9d63f448228d28557baf144dbcca86d7f1123c0ea6f498c68f69c
 
-MAINTAINER Jim Clark <jim@atomist.com>
+LABEL maintainer="Jim Clark <jim@atomist.com>"
 
 RUN mkdir -p /usr/src/app \
     && mkdir -p /usr/src/app/bin \
