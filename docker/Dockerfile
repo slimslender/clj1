@@ -12,7 +12,7 @@ COPY src /build/src
 
 RUN lein metajar
 
-FROM clojure:openjdk-11-lein@sha256:2050775923b9d63f448228d28557baf144dbcca86d7f1123c0ea6f498c68f69c
+FROM clojure:openjdk-11-lein@sha256:a074934ce4360b3a212c757f1f616d9e1713ae1de11c4f0ddf10147e4b38caf3
 
 MAINTAINER Jim Clark <jim@atomist.com>
 
